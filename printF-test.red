@@ -8,7 +8,7 @@ Red [
     }
 ]
 
-do load %Users/ralfwenske/Documents/GitHub/printF/printF.red
+do load %printF.red
 
 printF/underlined ["Other" [] "This" [-14] "That" [-10] "A Rest" [-8 ] "When" [-12]] #"_"
 printF ["abcde" [] 345.2345 [-14 2 "$ " 'blank] 123.4567 [-10 3] none [-8 ] 2000-1-1 [-12]]
