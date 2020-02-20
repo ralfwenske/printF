@@ -1,10 +1,26 @@
 # printF
  tabular printing in red
- 
- this syntax :
- ```
+
+```
+USAGE:
+     PRINTF b
+
+DESCRIPTION: 
+     print ( value [width decs prefix 'blank] ) pairs contained in a block. 
+     PRINTF is a function! value.
+
+ARGUMENTS:
+     b            [block!] 
+
+REFINEMENTS:
+     /underlined  => 
+        ch           [char!] "print extra line completely padded with ch."
+     /asString    => instead of printing return a string.
+``` 
+this syntax :
+```
 Red []
- 
+
 do load %printF.red
 
 printF/underlined ["Some examples" [20] "This" [-14] "That" [-10] "A Rest" [-8 ] "When" [-12]] #"_"
@@ -16,10 +32,10 @@ printF/underlined ["too big float" [20] 98765444444.7321 [-14 2 "$ " 'blank] 1.8
 
 str: printF/asString/underlined ["more underlined" [20] 345.2345 [-14 2 "$ " 'blank] 123.4567 [-10 3] 12345678 [-8 'blank] now/date [-12]] #"="
 print [str]
- ```
+```
  
- produces this report:
- ```
+produces this report:
+```
 Some examples                  This       That   A Rest         When 
 ____________________________________________________________________
 none shown                 $ 345.23    123.456            1-Jan-2000 
@@ -30,4 +46,4 @@ too big float        $ 98765444444.73      1.876    54321
 --------------------------------------------------------------------
 more underlined            $ 345.23    123.456 12345678  20-Feb-2020 
 ====================================================================
- ```
+```
