@@ -10,7 +10,7 @@ Red [
 
 do load %printF.red
 
-demo1: does [
+demo1: function [] [
     res: copy ""
     foreach blk [
         [#"=" "Some examples" [20] "This" [-14] "That" [-10] "A Rest" [-8 ] "When" [-12] #"_"]
@@ -24,7 +24,7 @@ demo1: does [
     res
 ]; demo1
 
-demo2: does [
+demo2: function [] [
     rdm: does [reduce [random "abcdefgh" random 1000 random 10000.0]]
     res: copy printf/asString [#"=" "FieldnameA" [20] "FieldnameB" [-10] "FieldnameC" [-14] #"-"]
     sum: copy [0 0]
