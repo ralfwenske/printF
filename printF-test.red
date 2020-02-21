@@ -66,4 +66,6 @@ win: layout compose/deep [
 
 probe mold :demo1
 
+help printF
+
 view/flags win ['resize]
